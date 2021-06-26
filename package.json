@@ -26,7 +26,7 @@
   "author": "Oscar Barajas <oscar@arepa.dev>",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.7.2",
+    "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-eslint": "^10.0.3",
@@ -58,6 +58,8 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "jest": "^27.0.5",
+    "jsdom": "16.6.0",
+    "jsdom-global": "3.0.2",
     "prettier": "^1.19.1",
     "webpack-dev-server": "^3.9.0"
   },
@@ -68,6 +70,9 @@
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/src/__test__/setupTest.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(styl|css)": "<rootDir>/src/__mocks__/styleMock.js"
+    }
   }
 }
