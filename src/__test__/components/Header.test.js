@@ -11,7 +11,7 @@ describe('<Header />', () => {
         <Header />
       </ProviderMock>
     );
-    expect(header.length).toEqual(1);
+    expect(header.length).toBeTr;
   });
 
   test('Render título', () => {
