@@ -1,23 +1,16 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
 import { expect, test } from '@jest/globals';
+import { mount } from 'enzyme';
+import Product from '../../components/Product';
 import ProviderMock from '../../__mocks__/ProviderMock';
-import Header from '../../components/Header';
 
-describe('<Header />', () => {
-  test('Render componente header', () => {
-    const header = shallow(
-      <ProviderMock>
-        <Header />
-      </ProviderMock>
-    );
-    expect(header.length).toEqual(1);
-  });
+describe('<Product />', () => {
+  test('Render componente Product', () => {});
 
   test('Render título', () => {
     const header = mount(
       <ProviderMock>
-        <Header />
+        <Product />
       </ProviderMock>
     );
     expect(header.find('.Header-title').text()).toEqual('Platzi Store');
